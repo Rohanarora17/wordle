@@ -17,14 +17,14 @@ function GuessInput() {
     
   }
   return <div>
-    <form class="guess-input-wrapper"  
+    <form className="guess-input-wrapper"  
     onSubmit={(e) => {
       e.preventDefault();
       {handleItems(input)};
       setInput('');
     }} 
     >
-    <label for="guess-input">Enter guess:</label>
+    <label htmlFor="guess-input">Enter guess:</label>
     <input id="guess-input" type="text" 
     onChange={(e)=> {
       setInput(e.target.value);
