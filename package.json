@@ -22,10 +22,8 @@
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "description": "wordle game",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "devDependencies": {},
+  
+  
+  
   "license": "ISC"
 }
