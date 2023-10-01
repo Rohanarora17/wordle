@@ -6,7 +6,7 @@ function GuessInput({gameStatus, handleSubmitGuess}) {
   function handleItems(event){
     event.preventDefault();
     
-    if(input.length!=5){
+    if(input.length!==5){
       window.alert('word should be of 5 letters');
       return;
 
