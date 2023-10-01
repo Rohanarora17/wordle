@@ -13,7 +13,9 @@ console.info({ answer });
 function Game() {
   return(
     <>
-      <GuessResults></GuessResults>
+      <GuessResults 
+      answer = {answer}>
+      </GuessResults>
   
       
   </>

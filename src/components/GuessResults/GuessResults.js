@@ -1,6 +1,12 @@
 import React from 'react';
 import GuessInput from '../GuessInput/GuessInput';
-function GuessResults() {
+import Guess from '../Guess/Guess';
+import { NUM_OF_GUESSES_ALLOWED } from '../../constants';
+import { range } from '../../utils';
+import { checkGuess } from '../../game-helpers';
+
+function GuessResults({answer}) {
+  
 
   const [guess,setGuess] = React.useState([]);
   function handleSubmitGuess(input){
@@ -9,12 +15,17 @@ function GuessResults() {
   return(
     <>
     <div className="guess-results">
-    {guess.map((item, index) =>{
+    {range(NUM_OF_GUESSES_ALLOWED).map((num) =>{
+      
+      
       return (
-        <p className="guess" key = {index}> {item}</p>
+        
+        <Guess key ={num} value= {guess[num]} classValue={checkGuess(guess[num], answer)}/>
+        
         
       )
     })}
+    
     <GuessInput
      handleSubmitGuess={handleSubmitGuess}
     >
